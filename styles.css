@@ -28,7 +28,12 @@ body {
     background-color: black;
     color: white;
     overflow: hidden;
-    transition: width 0.3s;
+    transition: transform 0.3s;
+    transform: translateX(-100%); /* Initially hide the sidebar off-screen */
+}
+
+#sidebar.expanded {
+    transform: translateX(0); /* Show the sidebar when expanded */
 }
 
 #sidebar-content {
@@ -59,6 +64,7 @@ body {
         height: auto;
         bottom: 0;
         transition: none;
+        transform: translateX(0); /* Show the sidebar on mobile devices */
     }
 
     #expand-button {
