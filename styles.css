@@ -20,6 +20,8 @@ body {
 }
 
 nav {
+    position: relative; /* Add this line to enable z-index */
+    z-index: 1; /* Add this line to set the stacking order */
     background-color: black;
     color: white;
     padding: 10px 0;
@@ -29,6 +31,8 @@ nav {
     list-style: none;
     display: flex;
     justify-content: center;
+    margin: 0; /* Add this line to remove default margin */
+    padding: 0; /* Add this line to remove default padding */
 }
 
 .menu li {
